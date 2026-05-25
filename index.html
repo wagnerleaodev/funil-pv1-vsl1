@@ -39,8 +39,8 @@ window.FUNIL_CONFIG = {
   funil_id:      'pv1-vsl1',
   funil_nome:    'PV1 VSL1 (FR)',
   pagina:        'vsl',
-  eventoEntrada: 'quiz_page_view'
-  // fb_pixel_id: [ 'XXX' ]  ← adicionar quando receber pixel
+  eventoEntrada: 'quiz_page_view',
+  fb_pixel_id:   ['1742137063439614']
 };
 
 // Event ID dedup compartilhado pixel ↔ Worker CAPI
@@ -472,38 +472,30 @@ setTimeout(function(){
 }, 4000);
 </script>
 
-<!--
-  ═══════════════════════════════════════════════════════════
-  META PIXEL — PENDENTE
-  Quando usuário enviar pixel novo:
-    1. Adicionar fb_pixel_id: ['XXX'] no FUNIL_CONFIG acima
-    2. Descomentar o bloco abaixo trocando XXX pelo pixel ID
-    3. Salvar token no Worker: wrangler secret put META_CAPI_TOKEN_XXX
-  ═══════════════════════════════════════════════════════════
+<!-- Meta Pixel — multi-pixel ready + event_id dedup com Worker CAPI (delay 4s) -->
+<script>
+setTimeout(function(){
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 
-  <script>
-  setTimeout(function(){
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
+var pixels = (window.FUNIL_CONFIG && window.FUNIL_CONFIG.fb_pixel_id) || [];
+if (!Array.isArray(pixels)) pixels = [pixels];
+pixels.forEach(function(pid){ if (pid) fbq('init', pid); });
 
-  var pixels = (window.FUNIL_CONFIG && window.FUNIL_CONFIG.fb_pixel_id) || [];
-  if (!Array.isArray(pixels)) pixels = [pixels];
-  pixels.forEach(function(pid){ if (pid) fbq('init', pid); });
-
-  fbq('track', 'PageView', {}, { eventID: window._getFbEventId('PageView') });
-  }, 4000);
-  </script>
-  <noscript>
-  <img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=XXX&ev=PageView&noscript=1"/>
-  </noscript>
--->
+fbq('track', 'PageView', {}, { eventID: window._getFbEventId('PageView') });
+}, 4000);
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1742137063439614&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
 
 </body>
 </html>
