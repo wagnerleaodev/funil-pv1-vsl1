@@ -16,6 +16,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:,">
 
+<!-- LCP IMAGE PRELOAD — ANTES dos scripts pra começar o fetch o mais cedo possível -->
+<link rel="preload" as="image" href="images/headline.webp" fetchpriority="high">
+
 <!-- ═══════════════════════════════════════════════════════════
      CANONICAL GUARD — bloqueia o .pages.dev cru de virar
      2ª fonte de dados. Roda ANTES de tudo.
@@ -80,7 +83,6 @@ window._getFbEventId('PageView');
      PRELOADS — Vturb + LCP image (headline rasterizada)
 ═══════════════════════════════════════════════════════════ -->
 <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
-<link rel="preload" as="image" href="images/headline.webp" fetchpriority="high">
 <link rel="preconnect" href="https://cdn.converteai.net" crossorigin>
 <link rel="preconnect" href="https://scripts.converteai.net" crossorigin>
 <link rel="preconnect" href="https://images.converteai.net" crossorigin>
