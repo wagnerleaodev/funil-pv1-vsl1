@@ -6,6 +6,7 @@
 <meta name="theme-color" content="#de2800">
 <meta name="robots" content="noindex,nofollow">
 <title>Bienvenue</title>
+<meta name="description" content="Présentation exclusive sélectionnée pour vous. À voir avant qu'elle ne soit retirée.">
 <meta property="og:title" content="Bienvenue">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.wellnessexpertpro.com/pv1-vsl1/">
@@ -87,8 +88,6 @@ window._getFbEventId('PageView');
 <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
 <link rel="preload" href="https://cdn.converteai.net/a2d83dff-330c-4ace-96ad-19f8f4d8c466/6a13d197b28e4eb31f80e1bb/main.m3u8" as="fetch" crossorigin>
 <link rel="dns-prefetch" href="https://license.vturb.com">
-<link rel="dns-prefetch" href="https://ipwho.is">
-<link rel="dns-prefetch" href="https://get.geojs.io">
 <link rel="preconnect" href="https://tracker.axislabs.tech" crossorigin>
 <link rel="preconnect" href="https://connect.facebook.net" crossorigin>
 
@@ -338,7 +337,7 @@ html,body{
 
 <!-- TOP RED BAR -->
 <div class="city-bar">
-  Vous et quelques personnes de <strong class="js-city">France</strong> avez été sélectionnés pour assister à cette présentation.
+  Vous et quelques personnes avez été sélectionnés pour assister à cette présentation.
 </div>
 
 <!-- MAIN -->
@@ -376,7 +375,6 @@ html,body{
 </main>
 
 <script>
-var cityName = null;
 var cmtLoaded = false;
 
 // Reveal comments só após interação humana (esconde testimonials do crawler)
@@ -386,10 +384,6 @@ function loadComments(){
     var el = document.getElementById('cmt-list');
     if(!el || !el.dataset.c) return;
     el.innerHTML = decodeURIComponent(escape(atob(el.dataset.c)));
-    if(cityName){
-      var nodes = el.querySelectorAll('.js-city');
-      for(var i=0; i<nodes.length; i++) nodes[i].textContent = cityName;
-    }
   }catch(e){}
 }
 
@@ -429,30 +423,6 @@ function runDynamic(){
       setTimeout(tickViewers, (3 + Math.random()*5) * 1000);
     }
   }catch(e){}
-
-  // City detection — try ipwho.is first, fall back to geojs.io
-  if(!('fetch' in window)) return;
-
-  function applyCity(city){
-    if(!city) return false;
-    cityName = city;
-    var nodes = document.querySelectorAll('.js-city');
-    for(var i=0; i<nodes.length; i++) nodes[i].textContent = city;
-    return true;
-  }
-
-  fetch('https://ipwho.is/', { cache: 'no-store' })
-    .then(function(r){ return r.ok ? r.json() : null; })
-    .then(function(d){
-      if(d && d.success && d.city){ applyCity(d.city); return true; }
-      throw new Error('ipwho empty');
-    })
-    .catch(function(){
-      return fetch('https://get.geojs.io/v1/ip/geo.json', { cache: 'no-store' })
-        .then(function(r){ return r.ok ? r.json() : null; })
-        .then(function(d){ if(d && d.city) applyCity(d.city); })
-        .catch(function(){});
-    });
 }
 
 if(document.readyState === 'loading'){
