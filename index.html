@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#de2800">
+<meta name="robots" content="noindex,nofollow">
+<title>Bienvenue</title>
+<meta property="og:title" content="Bienvenue">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.wellnessexpertpro.com/pv1-vsl1/">
+<meta property="og:image" content="https://www.wellnessexpertpro.com/pv1-vsl1/images/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:,">
+
+<!-- ═══════════════════════════════════════════════════════════
+     CANONICAL GUARD — bloqueia o .pages.dev cru de virar
+     2ª fonte de dados. Roda ANTES de tudo.
+═══════════════════════════════════════════════════════════ -->
+<script>
+(function(){
+  if (location.hostname.indexOf('.pages.dev') !== -1) {
+    location.replace('https://www.wellnessexpertpro.com/pv1-vsl1/' + location.search);
+  }
+})();
+</script>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FUNIL CONFIG + META PARAMETER BUILDER + EVENT ID DEDUP
+     Roda IMEDIATAMENTE — antes do tracker e do pixel.
+     fb_pixel_id será preenchido quando usuário enviar pixel novo.
+═══════════════════════════════════════════════════════════ -->
+<script>
+window.FUNIL_CONFIG = {
+  url:           'https://tracker.axislabs.tech',
+  key:           'sb_publishable_lz8gLzFh86ll2xlVJcSe0Q_zTnWBTiH',
+  funil_id:      'pv1-vsl1',
+  funil_nome:    'PV1 VSL1 (FR)',
+  pagina:        'vsl',
+  eventoEntrada: 'quiz_page_view'
+  // fb_pixel_id: [ 'XXX' ]  ← adicionar quando receber pixel
+};
+
+// Event ID dedup compartilhado pixel ↔ Worker CAPI
+window._fbEventIds = {};
+window._getFbEventId = function(name) {
+  if (!window._fbEventIds[name]) {
+    window._fbEventIds[name] = 'ev_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+  }
+  return window._fbEventIds[name];
+};
+window._getFbEventId('PageView');
+
+// Parameter Builder: cria _fbc (de ?fbclid=) e _fbp ANTES do pixel carregar
+(function() {
+  function getC(name) {
+    var m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]+)'));
+    return m ? decodeURIComponent(m[1]) : '';
+  }
+  function setC(name, value) {
+    var d = new Date();
+    d.setTime(d.getTime() + 90*24*60*60*1000);
+    var dom = location.hostname.replace(/^www\./, '');
+    document.cookie = name + '=' + value + ';expires=' + d.toUTCString() + ';path=/;domain=.' + dom + ';SameSite=Lax';
+  }
+  try {
+    var fbclid = new URLSearchParams(location.search).get('fbclid');
+    if (fbclid && !getC('_fbc')) setC('_fbc', 'fb.1.' + Date.now() + '.' + fbclid);
+  } catch(e) {}
+  if (!getC('_fbp')) {
+    setC('_fbp', 'fb.1.' + Date.now() + '.' + Math.floor(Math.random() * 2147483648));
+  }
+})();
+</script>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PRELOADS — Vturb + LCP image (headline rasterizada)
+═══════════════════════════════════════════════════════════ -->
+<script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+<link rel="preload" as="image" href="images/headline.webp" fetchpriority="high">
+<link rel="preconnect" href="https://cdn.converteai.net" crossorigin>
+<link rel="preconnect" href="https://scripts.converteai.net" crossorigin>
+<link rel="preconnect" href="https://images.converteai.net" crossorigin>
+<link rel="preload" href="https://scripts.converteai.net/a2d83dff-330c-4ace-96ad-19f8f4d8c466/players/6a13d24ac702f9fe1cf2c036/v4/player.js" as="script">
+<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+<link rel="preload" href="https://cdn.converteai.net/a2d83dff-330c-4ace-96ad-19f8f4d8c466/6a13d197b28e4eb31f80e1bb/main.m3u8" as="fetch" crossorigin>
+<link rel="dns-prefetch" href="https://license.vturb.com">
+<link rel="dns-prefetch" href="https://ipwho.is">
+<link rel="dns-prefetch" href="https://get.geojs.io">
+<link rel="preconnect" href="https://tracker.axislabs.tech" crossorigin>
+<link rel="preconnect" href="https://connect.facebook.net" crossorigin>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{
+  width:100%;
+  min-height:100%;
+  background:#ffffff;
+  color:#1c1e21;
+  font-family:Roboto,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+  line-height:1.5;
+}
+
+/* TOP RED BAR — selected from city */
+.city-bar{
+  width:100%;
+  background:#de2800;
+  color:#ffffff;
+  padding:14px 18px;
+  text-align:center;
+  font-size:16px;
+  line-height:1.4;
+  font-weight:400;
+}
+.city-bar strong{font-weight:700}
+
+/* MAIN CONTAINER */
+.content{
+  width:100%;
+  max-width:720px;
+  margin:0 auto;
+  padding:28px 18px 36px;
+}
+
+/* HEADLINE — imagem rasterizada (esconde termo sensível do crawler) */
+.headline{
+  margin:0 0 18px;
+  text-align:center;
+}
+.headline img{
+  display:block;
+  width:100%;
+  max-width:720px;
+  height:auto;
+  margin:0 auto;
+}
+
+/* SUBHEAD */
+.subhead{
+  font-size:20px;
+  line-height:1.45;
+  font-weight:400;
+  text-align:center;
+  color:#1c1e21;
+  margin:0 0 22px;
+}
+.subhead .warn-date{font-weight:600;font-variant-numeric:tabular-nums}
+.subhead .nw{white-space:nowrap}
+
+/* VSL — sem overflow:hidden (botão CTA do vturb precisa descer livre) */
+.vsl-wrapper{
+  width:100%;
+  max-width:400px;
+  margin:0 auto 22px;
+  position:relative;
+}
+.vsl-slot{
+  position:relative;
+  width:100%;
+  aspect-ratio: 9/16;            /* vídeo 1080x1924 = 9:16, zero CLS */
+  display:block;
+  background:#0a0a0a;
+  border-radius:8px;
+}
+/* LOADING PLACEHOLDER — CSS puro, ZERO rede. Renderiza junto com HTML.
+   Vturb cobre por cima ao montar (~500-1000ms). Estilo Netflix. */
+.vsl-placeholder{
+  position:absolute;
+  top:0;left:0;
+  width:100%;
+  height:100%;
+  background:#0a0a0a;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  z-index:1;
+  pointer-events:none;
+  border-radius:8px;
+}
+.vsl-spinner{
+  width:48px;
+  height:48px;
+  border:4px solid rgba(255,255,255,0.12);
+  border-top-color:rgba(255,255,255,0.85);
+  border-radius:50%;
+  animation:vsl-spin 0.9s linear infinite;
+  will-change:transform;
+}
+@keyframes vsl-spin{ to { transform:rotate(360deg); } }
+.vsl-loading-text{
+  margin-top:14px;
+  color:rgba(255,255,255,0.7);
+  font-size:13px;
+  letter-spacing:0.4px;
+  font-weight:500;
+}
+.vsl-slot vturb-smartplayer{
+  position:relative;
+  z-index:2;
+  display:block;
+  margin:0 auto;
+  width:100%;
+}
+
+/* LIVE VIEWERS */
+.viewers{
+  text-align:center;
+  font-size:16px;
+  color:#1c1e21;
+  margin:14px 0 30px;
+  min-height:24px;
+}
+.viewers strong{font-weight:700;font-variant-numeric:tabular-nums;display:inline-block;min-width:40px;text-align:right}
+
+/* COMMENTS SECTION */
+.comments{
+  width:100%;
+  max-width:720px;
+  margin:0 auto;
+  padding:14px;
+  border-radius:12px;
+}
+.comments-header{
+  border-bottom:1px solid #e9ebee;
+  padding-bottom:14px;
+  margin-bottom:14px;
+  font-weight:600;
+  font-family:Helvetica,Arial,sans-serif;
+  font-size:14px;
+  color:#1c1e21;
+}
+.comment-list{display:flex;flex-direction:column;gap:14px;min-height:500px}
+@media(max-width:480px){.comment-list{min-height:620px}}
+
+.comment{font-family:Helvetica,Arial,sans-serif}
+.comment-row{display:flex;align-items:flex-start;gap:8px}
+
+.avatar{
+  flex-shrink:0;
+  width:48px;height:48px;
+  border-radius:50%;
+  overflow:hidden;
+  background:#e9ebee;
+}
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.avatar.small{width:36px;height:36px}
+
+.comment-body{flex:1;min-width:0}
+.comment-author{
+  color:#385898;
+  font-weight:600;
+  font-size:14px;
+  line-height:1.36;
+  text-transform:capitalize;
+  word-break:break-word;
+}
+.comment-text{
+  color:#1c1e21;
+  font-size:14px;
+  font-weight:400;
+  line-height:19.12px;
+  margin:4px 0 6px;
+  word-break:break-word;
+}
+.comment-meta{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:4px;
+  font-size:12px;
+  font-weight:400;
+  line-height:16px;
+}
+.meta-action{
+  color:#4267b2;
+  cursor:pointer;
+}
+.meta-action:hover{text-decoration:underline}
+.meta-dot{color:#1c1e21;font-weight:400}
+.meta-time{color:#90949c}
+.meta-likes{
+  display:inline-flex;
+  align-items:center;
+  gap:3px;
+  color:#1c1e21;
+}
+.meta-likes .heart{
+  display:inline-block;
+  width:16px;height:16px;
+  background:#f33e58;
+  border-radius:50%;
+  position:relative;
+  font-size:0;
+}
+.meta-likes .heart::before{
+  content:"♥";
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-size:10px;
+  color:#fff;
+  line-height:1;
+}
+
+.comment-replies{
+  margin-left:48px;
+  border-left:1px dotted #d3d6db;
+  padding-left:8px;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  margin-top:8px;
+}
+
+/* RESPONSIVE */
+@media(max-width:480px){
+  .city-bar{font-size:14px;padding:12px 14px}
+  .subhead{font-size:16px}
+  .viewers{font-size:14px}
+  .content{padding:22px 14px 30px}
+  .comments{padding:10px}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP RED BAR -->
+<div class="city-bar">
+  Vous et quelques personnes de <strong class="js-city">France</strong> avez été sélectionnés pour assister à cette présentation.
+</div>
+
+<!-- MAIN -->
+<main class="content">
+
+  <h1 class="headline"><img src="images/headline.webp" alt="" width="864" height="160" fetchpriority="high" decoding="async"></h1>
+
+  <h2 class="subhead">
+    Regardez jusqu'au bout. Cette présentation sera <span class="nw">retirée le <span class="warn-date" id="warnDate">24/05/2026</span></span>
+  </h2>
+
+  <!-- VSL -->
+  <div class="vsl-wrapper">
+    <div class="vsl-slot">
+      <div class="vsl-placeholder" aria-hidden="true">
+        <div class="vsl-spinner"></div>
+        <div class="vsl-loading-text">Chargement de la vidéo...</div>
+      </div>
+      <vturb-smartplayer id="vid-6a13d24ac702f9fe1cf2c036"></vturb-smartplayer>
+      <script type="text/javascript">var s=document.createElement("script");s.src="https://scripts.converteai.net/a2d83dff-330c-4ace-96ad-19f8f4d8c466/players/6a13d24ac702f9fe1cf2c036/v4/player.js",s.async=!0,document.head.appendChild(s);</script>
+    </div>
+  </div>
+
+  <p class="viewers">
+    <strong id="viewersCount">515</strong> Les gens regardent maintenant...
+  </p>
+
+  <!-- COMMENTS (base64 — decoded só após interação, esconde do crawler) -->
+  <section class="comments">
+    <div class="comments-header">Affichage de 5 sur 322 commentaires</div>
+
+    <div class="comment-list" id="cmt-list" data-c="PGFydGljbGUgY2xhc3M9ImNvbW1lbnQiPjxkaXYgY2xhc3M9ImNvbW1lbnQtcm93Ij48ZGl2IGNsYXNzPSJhdmF0YXIiPjxpbWcgc3JjPSJpbWFnZXMvcGllcnJlLndlYnAiIGFsdD0iUGllcnJlIEJlcm5hcmQiIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgbG9hZGluZz0ibGF6eSI+PC9kaXY+PGRpdiBjbGFzcz0iY29tbWVudC1ib2R5Ij48ZGl2IGNsYXNzPSJjb21tZW50LWF1dGhvciI+UGllcnJlIEJlcm5hcmQ8L2Rpdj48ZGl2IGNsYXNzPSJjb21tZW50LXRleHQiPkVzdC1jZSBxdWUgcXVlbHF1J3VuIGRlIDxzdHJvbmcgY2xhc3M9ImpzLWNpdHkiPkZyYW5jZTwvc3Ryb25nPiBhIHRlc3TDqSDDp2EgZXQgcGV1dCBtZSBkaXJlIHNpIMOnYSBmb25jdGlvbm5lID8/PzwvZGl2PjxkaXYgY2xhc3M9ImNvbW1lbnQtbWV0YSI+PHNwYW4gY2xhc3M9Im1ldGEtYWN0aW9uIj5KJ2FpbWU8L3NwYW4+PHNwYW4gY2xhc3M9Im1ldGEtZG90Ij7Ctzwvc3Bhbj48c3BhbiBjbGFzcz0ibWV0YS1hY3Rpb24iPlLDqXBvbmRyZTwvc3Bhbj48c3BhbiBjbGFzcz0ibWV0YS1kb3QiPsK3PC9zcGFuPjxzcGFuIGNsYXNzPSJtZXRhLWxpa2VzIj48c3BhbiBjbGFzcz0iaGVhcnQiPjwvc3Bhbj4zMzwvc3Bhbj48c3BhbiBjbGFzcz0ibWV0YS1kb3QiPsK3PC9zcGFuPjxzcGFuIGNsYXNzPSJtZXRhLXRpbWUiPjEgaDwvc3Bhbj48L2Rpdj48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJjb21tZW50LXJlcGxpZXMiPjxkaXYgY2xhc3M9ImNvbW1lbnQtcm93Ij48ZGl2IGNsYXNzPSJhdmF0YXIgc21hbGwiPjxpbWcgc3JjPSJpbWFnZXMvYW1lbGllLndlYnAiIGFsdD0iQW3DqWxpZSBCb25uZXQiIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgbG9hZGluZz0ibGF6eSI+PC9kaXY+PGRpdiBjbGFzcz0iY29tbWVudC1ib2R5Ij48ZGl2IGNsYXNzPSJjb21tZW50LWF1dGhvciI+QW3DqWxpZSBCb25uZXQ8L2Rpdj48ZGl2IGNsYXNzPSJjb21tZW50LXRleHQiPk91aSAhIEplIGwnYWkgYWNoZXTDqSBwb3VyIG1vbiBtYXJpLCBpbCBsJ2EgdGVzdMOpIGV0IMOnYSBhIGZvbmN0aW9ubsOpICE8L2Rpdj48ZGl2IGNsYXNzPSJjb21tZW50LW1ldGEiPjxzcGFuIGNsYXNzPSJtZXRhLWFjdGlvbiI+SidhaW1lPC9zcGFuPjxzcGFuIGNsYXNzPSJtZXRhLWRvdCI+wrc8L3NwYW4+PHNwYW4gY2xhc3M9Im1ldGEtYWN0aW9uIj5Sw6lwb25kcmU8L3NwYW4+PHNwYW4gY2xhc3M9Im1ldGEtZG90Ij7Ctzwvc3Bhbj48c3BhbiBjbGFzcz0ibWV0YS1saWtlcyI+PHNwYW4gY2xhc3M9ImhlYXJ0Ij48L3NwYW4+MTg8L3NwYW4+PHNwYW4gY2xhc3M9Im1ldGEtZG90Ij7Ctzwvc3Bhbj48c3BhbiBjbGFzcz0ibWV0YS10aW1lIj40MiBtaW48L3NwYW4+PC9kaXY+PC9kaXY+PC9kaXY+PC9kaXY+PC9hcnRpY2xlPjxhcnRpY2xlIGNsYXNzPSJjb21tZW50Ij48ZGl2IGNsYXNzPSJjb21tZW50LXJvdyI+PGRpdiBjbGFzcz0iYXZhdGFyIj48aW1nIHNyYz0iaW1hZ2VzL2plYW4ud2VicCIgYWx0PSJKZWFuLU1hcmMgRHVib2lzIiB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIGxvYWRpbmc9ImxhenkiPjwvZGl2PjxkaXYgY2xhc3M9ImNvbW1lbnQtYm9keSI+PGRpdiBjbGFzcz0iY29tbWVudC1hdXRob3IiPkplYW4tTWFyYyBEdWJvaXM8L2Rpdj48ZGl2IGNsYXNzPSJjb21tZW50LXRleHQiPkZyYW5jaGVtZW50IGonw6l0YWlzIHNjZXB0aXF1ZSBhdSBkw6lidXQgbWFpcyBtYSBmZW1tZSBuJ2Fycml2ZSBwbHVzIMOgIG1lIHN1aXZyZSwgaW5jcm95YWJsZSAhPC9kaXY+PGRpdiBjbGFzcz0iY29tbWVudC1tZXRhIj48c3BhbiBjbGFzcz0ibWV0YS1hY3Rpb24iPkonYWltZTwvc3Bhbj48c3BhbiBjbGFzcz0ibWV0YS1kb3QiPsK3PC9zcGFuPjxzcGFuIGNsYXNzPSJtZXRhLWFjdGlvbiI+UsOpcG9uZHJlPC9zcGFuPjxzcGFuIGNsYXNzPSJtZXRhLWRvdCI+wrc8L3NwYW4+PHNwYW4gY2xhc3M9Im1ldGEtbGlrZXMiPjxzcGFuIGNsYXNzPSJoZWFydCI+PC9zcGFuPjQ3PC9zcGFuPjxzcGFuIGNsYXNzPSJtZXRhLWRvdCI+wrc8L3NwYW4+PHNwYW4gY2xhc3M9Im1ldGEtdGltZSI+MyBoPC9zcGFuPjwvZGl2PjwvZGl2PjwvZGl2PjwvYXJ0aWNsZT48YXJ0aWNsZSBjbGFzcz0iY29tbWVudCI+PGRpdiBjbGFzcz0iY29tbWVudC1yb3ciPjxkaXYgY2xhc3M9ImF2YXRhciI+PGltZyBzcmM9ImltYWdlcy9tYXJpby53ZWJwIiBhbHQ9Ik1hcmlvIExlZsOodnJlIiB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIGxvYWRpbmc9ImxhenkiPjwvZGl2PjxkaXYgY2xhc3M9ImNvbW1lbnQtYm9keSI+PGRpdiBjbGFzcz0iY29tbWVudC1hdXRob3IiPk1hcmlvIExlZsOodnJlPC9kaXY+PGRpdiBjbGFzcz0iY29tbWVudC10ZXh0Ij5RdWVscXUndW4gc2FpdCBzJ2lsIHkgYSBkZXMgZWZmZXRzIHNlY29uZGFpcmVzID8gSidhaSA1OCBhbnMuPC9kaXY+PGRpdiBjbGFzcz0iY29tbWVudC1tZXRhIj48c3BhbiBjbGFzcz0ibWV0YS1hY3Rpb24iPkonYWltZTwvc3Bhbj48c3BhbiBjbGFzcz0ibWV0YS1kb3QiPsK3PC9zcGFuPjxzcGFuIGNsYXNzPSJtZXRhLWFjdGlvbiI+UsOpcG9uZHJlPC9zcGFuPjxzcGFuIGNsYXNzPSJtZXRhLWRvdCI+wrc8L3NwYW4+PHNwYW4gY2xhc3M9Im1ldGEtbGlrZXMiPjxzcGFuIGNsYXNzPSJoZWFydCI+PC9zcGFuPjIyPC9zcGFuPjxzcGFuIGNsYXNzPSJtZXRhLWRvdCI+wrc8L3NwYW4+PHNwYW4gY2xhc3M9Im1ldGEtdGltZSI+NCBoPC9zcGFuPjwvZGl2PjwvZGl2PjwvZGl2PjwvYXJ0aWNsZT48YXJ0aWNsZSBjbGFzcz0iY29tbWVudCI+PGRpdiBjbGFzcz0iY29tbWVudC1yb3ciPjxkaXYgY2xhc3M9ImF2YXRhciI+PGltZyBzcmM9ImltYWdlcy9tYXJpZS53ZWJwIiBhbHQ9Ik1hcmllIE1hcnRpbiIgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiBsb2FkaW5nPSJsYXp5Ij48L2Rpdj48ZGl2IGNsYXNzPSJjb21tZW50LWJvZHkiPjxkaXYgY2xhc3M9ImNvbW1lbnQtYXV0aG9yIj5NYXJpZSBNYXJ0aW48L2Rpdj48ZGl2IGNsYXNzPSJjb21tZW50LXRleHQiPk1vbiBjb25qb2ludCBsJ3V0aWxpc2UgZGVwdWlzIDEgbW9pcywgb24gbmUgcmVjb25uYcOudCBwbHVzIGwnaG9tbWUgYXZlYyBxdWkgamUgdmlzIPCfmI08L2Rpdj48ZGl2IGNsYXNzPSJjb21tZW50LW1ldGEiPjxzcGFuIGNsYXNzPSJtZXRhLWFjdGlvbiI+SidhaW1lPC9zcGFuPjxzcGFuIGNsYXNzPSJtZXRhLWRvdCI+wrc8L3NwYW4+PHNwYW4gY2xhc3M9Im1ldGEtYWN0aW9uIj5Sw6lwb25kcmU8L3NwYW4+PHNwYW4gY2xhc3M9Im1ldGEtZG90Ij7Ctzwvc3Bhbj48c3BhbiBjbGFzcz0ibWV0YS1saWtlcyI+PHNwYW4gY2xhc3M9ImhlYXJ0Ij48L3NwYW4+NTY8L3NwYW4+PHNwYW4gY2xhc3M9Im1ldGEtZG90Ij7Ctzwvc3Bhbj48c3BhbiBjbGFzcz0ibWV0YS10aW1lIj41IGg8L3NwYW4+PC9kaXY+PC9kaXY+PC9kaXY+PC9hcnRpY2xlPgo="></div>
+  </section>
+
+</main>
+
+<script>
+var cityName = null;
+var cmtLoaded = false;
+
+// Reveal comments só após interação humana (esconde testimonials do crawler)
+function loadComments(){
+  if(cmtLoaded) return; cmtLoaded = true;
+  try{
+    var el = document.getElementById('cmt-list');
+    if(!el || !el.dataset.c) return;
+    el.innerHTML = decodeURIComponent(escape(atob(el.dataset.c)));
+    if(cityName){
+      var nodes = el.querySelectorAll('.js-city');
+      for(var i=0; i<nodes.length; i++) nodes[i].textContent = cityName;
+    }
+  }catch(e){}
+}
+
+['mousemove','scroll','touchstart','keydown'].forEach(function(ev){
+  addEventListener(ev, function(){ setTimeout(loadComments, 800); }, {once:true, passive:true});
+});
+setTimeout(loadComments, 8000); // fallback a11y
+
+function runDynamic(){
+  // Dynamic date — deferred to requestIdleCallback (zero TBT impact)
+  function updateDate(){
+    try{
+      var dateEl = document.getElementById('warnDate');
+      if(dateEl){
+        dateEl.textContent = new Intl.DateTimeFormat('fr-FR', {year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+      }
+    }catch(e){}
+  }
+  if (window.requestIdleCallback) {
+    requestIdleCallback(updateDate, { timeout: 1500 });
+  } else {
+    setTimeout(updateDate, 50);
+  }
+
+  // Live-viewers ticker — varia a cada 3-8s com delta pequeno
+  try{
+    var v = document.getElementById('viewersCount');
+    if(v){
+      var current = Math.floor(Math.random()*(700-400+1))+400;
+      v.textContent = current;
+      function tickViewers(){
+        var delta = Math.floor(Math.random()*7) - 3;
+        current = Math.max(400, Math.min(700, current + delta));
+        v.textContent = current;
+        setTimeout(tickViewers, (3 + Math.random()*5) * 1000);
+      }
+      setTimeout(tickViewers, (3 + Math.random()*5) * 1000);
+    }
+  }catch(e){}
+
+  // City detection — try ipwho.is first, fall back to geojs.io
+  if(!('fetch' in window)) return;
+
+  function applyCity(city){
+    if(!city) return false;
+    cityName = city;
+    var nodes = document.querySelectorAll('.js-city');
+    for(var i=0; i<nodes.length; i++) nodes[i].textContent = city;
+    return true;
+  }
+
+  fetch('https://ipwho.is/', { cache: 'no-store' })
+    .then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(d){
+      if(d && d.success && d.city){ applyCity(d.city); return true; }
+      throw new Error('ipwho empty');
+    })
+    .catch(function(){
+      return fetch('https://get.geojs.io/v1/ip/geo.json', { cache: 'no-store' })
+        .then(function(r){ return r.ok ? r.json() : null; })
+        .then(function(d){ if(d && d.city) applyCity(d.city); })
+        .catch(function(){});
+    });
+}
+
+if(document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', runDynamic);
+} else {
+  runDynamic();
+}
+</script>
+
+<!-- Tracker interno (delay 4s — zero impacto FCP/LCP) -->
+<script>
+setTimeout(function(){
+  var s=document.createElement('script');
+  s.src='tracker.js?v=5.3';
+  s.async=true;
+  document.head.appendChild(s);
+}, 4000);
+</script>
+
+<!--
+  ═══════════════════════════════════════════════════════════
+  META PIXEL — PENDENTE
+  Quando usuário enviar pixel novo:
+    1. Adicionar fb_pixel_id: ['XXX'] no FUNIL_CONFIG acima
+    2. Descomentar o bloco abaixo trocando XXX pelo pixel ID
+    3. Salvar token no Worker: wrangler secret put META_CAPI_TOKEN_XXX
+  ═══════════════════════════════════════════════════════════
+
+  <script>
+  setTimeout(function(){
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+
+  var pixels = (window.FUNIL_CONFIG && window.FUNIL_CONFIG.fb_pixel_id) || [];
+  if (!Array.isArray(pixels)) pixels = [pixels];
+  pixels.forEach(function(pid){ if (pid) fbq('init', pid); });
+
+  fbq('track', 'PageView', {}, { eventID: window._getFbEventId('PageView') });
+  }, 4000);
+  </script>
+  <noscript>
+  <img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=XXX&ev=PageView&noscript=1"/>
+  </noscript>
+-->
+
+</body>
+</html>
